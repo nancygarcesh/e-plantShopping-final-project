@@ -329,8 +329,11 @@ function ProductList() {
                     <img className="product-image" src={plant.image} alt={plant.name} />
                     <p className="product-price">{plant.cost}</p>
                     <p>{plant.description}</p>
-                    <button className={"product-button " + (addedToCart(plant) ? "added-to-cart" : "")} onClick={() => handleAddToCart(plant)}>
-                      Add to Cart
+                    <button
+                        className={"product-button " + (addedToCart(plant) ? "added-to-cart" : "")}
+                        onClick={() => handleAddToCart(plant)}
+                        >
+                        {addedToCart(plant) ? "Added to Cart" : "Add to Cart"}
                     </button>
                   </li>
                 ))}
